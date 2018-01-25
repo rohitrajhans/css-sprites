@@ -1,0 +1,33 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.parent {
+  position: relative;
+  width: 50%;
+  margin: -5% auto 0 auto;
+}
+
+.parent:before {
+  content: "";
+  display: block;
+  padding-top: 61.37%; 
+}
+
+.sprite {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background:  url('ryu-sprite-demo.png') no-repeat 0 0%;
+  background-size: 100%;
+  animation: sprite 3.5s steps(45) infinite;
+}
+
+@keyframes sprite {
+  from { background-position: 0 0%; }
+  to { background-position: 0 100%; }
+}
+
