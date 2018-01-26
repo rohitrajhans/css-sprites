@@ -11,6 +11,38 @@
   		<div class="sprite"></div>
 	</div>
 
-<script type="text/javascript" src="js/prefixfree.min.js">"></script>
+<script type="text/javascript">
+	
+	var width;
+
+	function getWidth() {
+  		if (self.innerWidth) {
+    		width = self.innerWidth;
+    		/*return function resize() {
+			document.getElementsByClassName('sprite')[0].style.transform = 'scale(2)';
+		}*/
+  	}
+
+ 		if (document.documentElement && document.documentElement.clientWidth) {
+ 	   		width =  document.documentElement.clientWidth;
+ 		   	/*return function resize() {
+			document.getElementsByClassName('sprite')[0].style.transform = 'scale(2)';
+		}*/
+  	}
+
+  		if (document.body) {
+    		width = document.body.clientWidth;
+    		/*return function resize() {
+			document.getElementsByClassName('sprite')[0].style.transform = 'scale(2)';
+			}*/
+  		}
+	}
+
+	getWidth();
+	
+
+	
+
+</script>
 </body>
 </html>

@@ -6,7 +6,7 @@ body {
 .parent {
   position: relative;
   width: 50%;
-  margin: -5% auto 0 auto;
+  margin: 0% auto 0 auto;
 }
 
 .parent:before {
@@ -31,3 +31,43 @@ body {
   to { background-position: 0 100%; }
 }
 
+
+@media  all and (max-width:768px) and (min-width: 360px){
+   .sprite {
+       transform:scale(1.5);
+   }
+
+   .parent {
+      margin: 10% 20%;
+   }
+}
+
+@media all and (max-width: 360px ) and (min-width: 150px) {
+  .sprite {
+    transform: scale(2.5);
+  }
+
+  .parent {
+    margin: 20% 20%;
+  }
+}
+
+@media all and (max-width: 150px) and (min-width: 100px) {
+  .sprite {
+    transform: scale(12);
+  }
+
+  .parent {
+    margin: 150% 150%;
+  }
+}
+
+@media all and (max-width: 100px) {
+  .sprite {
+    transform: scale(16);
+  }
+
+  .parent {
+    margin: 150% 200%;
+  }
+}
