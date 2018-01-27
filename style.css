@@ -21,7 +21,7 @@ body {
   top: 0;
   right: 0;
   bottom: 0;
-  background:  url('ryu-sprite-demo.png') no-repeat 0 0%;
+  background:  url('sprites.png') no-repeat 0 0%;
   background-size: 100%;
   animation: sprite 3.5s steps(45) infinite;
 }
@@ -70,4 +70,47 @@ body {
   .parent {
     margin: 150% 200%;
   }
+}
+
+
+@media all and (min-height: 350px ) {
+  .sprite {
+    transform: scale(1.2);
+  }
+}
+
+@media all and (min-height: 225px ) and (max-height: 350px ) {
+ .sprite {
+    transform: scale(1); 
+ } 
+ .parent {
+  margin: 0% 20%;
+ }
+}
+
+@media all and (min-height: 150px ) and (max-height: 225px) {
+ .sprite {
+    transform: scale(0.8); 
+ } 
+ .parent {
+  margin: -5% 20%;
+ }
+}
+
+@media all and (min-height: 100px ) and (max-height: 150px) {
+ .sprite {
+    transform: scale(0.6); 
+ } 
+ .parent {
+  margin: -10% 20%;
+ }
+}
+
+@media all and (min-height: 50px ) and (max-height: 100px) {
+ .sprite {
+    transform: scale(0.3); 
+ } 
+ .parent {
+  margin: -13% 20%;
+ }
 }
